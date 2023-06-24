@@ -1,0 +1,22 @@
+GET http://localhost:3005/recipes
+
+###
+POST http://localhost:3005/recipe/create
+Content-Type: application/json
+
+{
+    "title": " Chicken",
+    "description": "Spicy chicken curry from Kolhapur",
+    "ingredients": "Chicken, red chilli powder, salt, oil, onion, tomato, ginger garlic paste, turmeric powder, coriander powder, cumin powder, garam masala, coriander leaves",
+    "instructions": "Heat oil in a pan, add onion and saute till golden brown. Add ginger garlic paste and saute till raw smell goes away. Add tomato and saute till mushy. Add turmeric powder, coriander powder, cumin powder, red chilli powder and saute till oil separates. Add chicken and salt and mix well. Add water and cook till chicken is done. Add garam masala and coriander leaves and mix well. Serve hot with rice or roti.",
+    "image": "Tikka.jpg"
+    
+}
+
+###
+
+DELETE http://localhost:3005/recipe/delete/6496c5a2a24ade9ff8e89823
+
+###
+
+
