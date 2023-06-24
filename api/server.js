@@ -51,6 +51,12 @@ app.get("/recipe/:id", async (req, res) => {
   res.json(recipe);
 });
 
+// get with name
+app.get("/recipe/:title", async (req, res) => {
+  const recipe = await Recipe.find({ title: req.params.title });
+  res.json(recipe);
+});
+
 app.put("/recipe/update/:id", async (req, res) => {
   const recipe = await Recipe.findById(req.params.id);
   recipe.title = req.body.title;

@@ -78,13 +78,13 @@ function EditRecipe({ recipe, edit, setEdit, fetchRecipes }) {
             setEditRecipe({ ...editRecipe, instructions: e.target.value });
           }}
         />
-        <input
+        {/* <input
           type="file"
           name="image"
           onChange={(e) => {
             setEditRecipe({ ...editRecipe, image: e.target.files[0].name });
           }}
-        />
+        /> */}
         <button type="submit">Update</button>
       </form>
     </div>
