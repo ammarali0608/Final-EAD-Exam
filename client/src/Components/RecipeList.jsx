@@ -1,4 +1,5 @@
 import React from "react";
+import Recipe from "./Recipe";
 
 function RecipeList({ recipes }) {
   console.log(recipes);
@@ -7,15 +8,10 @@ function RecipeList({ recipes }) {
       <h1>Recipies</h1>
 
       {recipes.map((recipe) => (
-        <div className="recipe" key={recipe._id}>
-          <h2>{recipe.title}</h2>
-          <p>{recipe.description}</p>
-          <img
-            width="100"
-            height="50"
-            src={require("./../images/" + recipe.image)}
-          />
-        </div>
+        <>
+          <Recipe recipe={recipe} />
+          <hr />
+        </>
       ))}
     </div>
   );
