@@ -56,7 +56,6 @@ function App() {
         <input type="file" name="image" />
         <button type="submit">Create</button>
       </form>
-      <h1>Recipies</h1>
       <RecipeList recipes={recipes} />
     </div>
   );
