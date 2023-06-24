@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import EditRecipe from "./EditRecipe";
+import DeleteRecipe from "./DeleteRecipe";
 
 function Recipe({ recipe, fetchRecipes }) {
   const [show, setShow] = useState(false);
   const [edit, setEdit] = useState(false);
-
+  const [confirmDelete, setConfirmDelete] = useState(false);
   return (
     <div>
       {edit ? (
@@ -53,6 +54,15 @@ function Recipe({ recipe, fetchRecipes }) {
       >
         {edit ? "Cancel" : "Edit"}
       </button>
+      {/* pop up for deletion
+       */}
+
+      <DeleteRecipe
+        recipe={recipe}
+        fetchRecipes={fetchRecipes}
+        confirmDelete={confirmDelete}
+        setConfirmDelete={setConfirmDelete}
+      />
     </div>
   );
 }

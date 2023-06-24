@@ -15,6 +15,7 @@ function EditRecipe({ recipe, edit, setEdit, fetchRecipes }) {
 
           let image = null;
           if (e.target.image.files[0]) image = e.target.image.files[0].name;
+          else image = recipe.image;
           if (!title || !description || !ingredients || !instructions || !image)
             return alert("Please fill all the fields");
 
@@ -80,7 +81,6 @@ function EditRecipe({ recipe, edit, setEdit, fetchRecipes }) {
         <input
           type="file"
           name="image"
-          files={[editRecipe.image]}
           onChange={(e) => {
             setEditRecipe({ ...editRecipe, image: e.target.files[0].name });
           }}
